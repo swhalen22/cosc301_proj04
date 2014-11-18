@@ -1,24 +1,26 @@
 /*
- * 
+ * Sam Whalen and Zack Smith
  */
 
 #ifndef __THREADSALIVE_H__
 #define __THREADSALIVE_H__
+#include "list.h"
 
 /* ***************************
         type definitions
    *************************** */
 
 typedef struct {
-
+	int val;
+	thread *wait;
 } tasem_t;
 
 typedef struct {
-
+	tasem_t *sem;
 } talock_t;
 
 typedef struct {
-
+	tasem_t *sem;
 } tacond_t;
 
 
